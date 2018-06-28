@@ -1,0 +1,26 @@
+public class NOTE{
+    int punkte;
+    double note;
+    date datum;
+    String bemerkung;
+    boolean schriftlich;
+    public NOTE{
+
+    }
+    double NoteGeben(){
+        if(punkte == 15){
+            return 0,66;
+        }
+        if(punkte == 14){
+            return 1,0;
+        }
+        if(punkte == 13){
+            return 1,33;
+        } if(punkte == 12){
+            return 1,66;
+        }
+    }
+    int PunkteGeben(){
+        return punkte;
+    }
+}
