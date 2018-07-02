@@ -24,7 +24,9 @@ public class VIEW extends JFrame {
         faecher.add(new FACH("Informatik", Color.BLUE));
         faecher.add(new FACH("Wirtschaft und Recht", Color.BLUE));
         faecher.add(new FACH("Kunst", Color.BLUE));
+        //TODO 1. und 2. HJ normal W-Seminar Arbeit doppelt
         faecher.add(new FACH("W-Seminar", Color.BLUE));
+        //TODO BUS und Praxis
         faecher.add(new FACH("P-Seminar", Color.BLUE));
 
         faecherJlist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
