@@ -1,15 +1,28 @@
 import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class View extends JFrame {
+public class VIEW extends JFrame {
 
-    private JList<FACH> faecher;
+    private List<FACH> faecher = new ArrayList<>();
+    private JList faecherJlist = new JList(faecher.toArray());
 
-    public View(){
+    public VIEW(){
         super("Notenprogramm");
         setSize(1000, 1280);
         setVisible(true);
+        setLayout(null);
 
-        faecher = new JList<>();
-        faecher.setBounds(20,20,200,1000);
+        faecher.add(new FACH("Mathe", Color.BLUE));
+
+        faecherJlist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        faecherJlist.setListData(faecher.toArray());
+
+        JScrollPane listScrollPane = new JScrollPane();
+        listScrollPane.getViewport().setView(faecherJlist);
+        listScrollPane.setBounds(20, 20, 200, 1000);
+        add(listScrollPane);
+
     }
 }

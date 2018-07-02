@@ -21,4 +21,9 @@ public class FACH {
     public void SchriftlicheNoteHinzufuegen(){
 
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
