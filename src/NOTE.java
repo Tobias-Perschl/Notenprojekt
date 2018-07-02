@@ -1,55 +1,109 @@
 import java.util.Date;
 
 public class NOTE{
-    int punkte;
-    double note;
-    Date datum;
-    String bemerkung;
-    boolean schriftlich;
-    public NOTE(){
+    private int punkte;
+    private double note;
+    private Date datum;
+    private String bemerkung;
+    private boolean schriftlich;
+
+    public NOTE(int punkte, Date datum, String bemerkung, boolean schriftlich){
+        this.punkte=punkte;
+        this.datum=datum;
+        this.bemerkung=bemerkung;
+        this.schriftlich=schriftlich;
 
     }
-    double NoteGeben() {
 
-        switch (punkte) {
-            case 15:
-                return 0.66;
-            case 14:
-                return 1.00;
-            case 13:
-                return 1.33;
-            case 12:
-                return 1.66;
-            case 11:
-                return 2.00;
-            case 10:
-                return 2.33;
-            case 9:
-                return 2.66;
-            case 8:
-                return 3.00;
-            case 7:
-                return 3.33;
-            case 6:
-                return 3.66;
-            case 5:
-                return 4.00;
-            case 4:
-                return 4.33;
-            case 3:
-                return 4.66;
-            case 2:
-                return 5.00;
-            case 1:
-                return 5.33;
-            case 0:
-                return 6.00;
-            default:
-                return 0;
+
+    public double NoteGeben() {
+
+        if(note==0) {
+            switch (punkte) {
+                case 15:
+                     note = 0.66;
+                     break;
+                case 14:
+                    note = 1.00;
+                    break;
+                case 13:
+                    note = 1.33;
+                    break;
+                case 12:
+                    note = 1.66;
+                    break;
+                case 11:
+                    note = 2.00;
+                    break;
+                case 10:
+                    note = 2.33;
+                    break;
+                case 9:
+                    note = 2.66;
+                    break;
+                case 8:
+                    note = 3.00;
+                    break;
+                case 7:
+                    note = 3.33;
+                    break;
+                case 6:
+                    note = 3.66;
+                    break;
+                case 5:
+                    note = 4.00;
+                    break;
+                case 4:
+                    note = 4.33;
+                    break;
+                case 3:
+                    note = 4.66;
+                    break;
+                case 2:
+                    note = 5.00;
+                    break;
+                case 1:
+                    note = 5.33;
+                    break;
+                case 0:
+                    note = 6.00;
+                    break;
+            }
         }
+
+        return note;
     }
 
-    int PunkteGeben(){
+    public Date DatumGeben() {
+        return datum;
+    }
+
+
+    public String BemerkungGeben() {
+        return bemerkung;
+    }
+
+    public void BemerkungSetzen(String bemerkung) {
+        this.bemerkung = bemerkung;
+    }
+
+    public void DatumSetzen(Date datum) {
+        this.datum = datum;
+    }
+
+    public void NoteSetzen(double note) {
+        this.note = note;
+    }
+
+    public void PunkteSetzen(int punkte) {
+        this.punkte = punkte;
+    }
+
+    public void SchriftlichSetzen(boolean schriftlich) {
+        this.schriftlich = schriftlich;
+    }
+
+    public int PunkteGeben(){
         return punkte;
     }
 }
