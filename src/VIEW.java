@@ -20,10 +20,15 @@ public class VIEW extends JFrame {
         faecher.add(new FACH("Geschichte + Sozialkunde", Color.BLUE));
         faecher.add(new FACH("Sport", Color.BLUE));
         faecher.add(new FACH("Englisch", Color.BLUE));
+        faecher.add(new FACH("Latein", Color.BLUE));
+        faecher.add(new FACH("Italienisch", Color.BLUE));
+        faecher.add(new FACH("Franzoesisch", Color.BLUE));
         faecher.add(new FACH("Physik", Color.BLUE));
         faecher.add(new FACH("Informatik", Color.BLUE));
         faecher.add(new FACH("Wirtschaft und Recht", Color.BLUE));
+        faecher.add(new FACH("Geographie", Color.BLUE));
         faecher.add(new FACH("Kunst", Color.BLUE));
+        faecher.add(new FACH("Musik", Color.BLUE));
         //TODO 1. und 2. HJ normal W-Seminar Arbeit doppelt
         faecher.add(new FACH("W-Seminar", Color.BLUE));
         //TODO BUS und Praxis
