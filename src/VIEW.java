@@ -14,7 +14,18 @@ public class VIEW extends JFrame {
         setVisible(true);
         setLayout(null);
 
-        faecher.add(new FACH("Mathe", Color.BLUE));
+        faecher.add(new FACH("Mathematik", Color.BLUE));
+        faecher.add(new FACH("Deutsch", Color.BLUE));
+        faecher.add(new FACH("Religionslehre", Color.BLUE));
+        faecher.add(new FACH("Geschichte + Sozialkunde", Color.BLUE));
+        faecher.add(new FACH("Sport", Color.BLUE));
+        faecher.add(new FACH("Englisch", Color.BLUE));
+        faecher.add(new FACH("Physik", Color.BLUE));
+        faecher.add(new FACH("Informatik", Color.BLUE));
+        faecher.add(new FACH("Wirtschaft und Recht", Color.BLUE));
+        faecher.add(new FACH("Kunst", Color.BLUE));
+        faecher.add(new FACH("W-Seminar", Color.BLUE));
+        faecher.add(new FACH("P-Seminar", Color.BLUE));
 
         faecherJlist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         faecherJlist.setListData(faecher.toArray());
