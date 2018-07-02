@@ -46,15 +46,7 @@ public class LISTE
         return d;
     }
 
-    DATENELEMENT Suchen(String suchStr) {
-        return anfang.Suchen(suchStr);
-    }
-
-    boolean  IstVorhanden(String suchStr) {
-        return anfang.IstVorhanden(suchStr);
-    }
-
-    void EinfuegenVor(DATENELEMENT dNeu, 
+    void EinfuegenVor(DATENELEMENT dNeu,
     DATENELEMENT dVor)  {
         anfang = anfang.EinfuegenVor(dNeu, dVor);
     }

@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class NOTE{
+public class NOTE implements DATENELEMENT{
     private int punkte;
     private double note;
     private Date datum;
@@ -105,5 +105,15 @@ public class NOTE{
 
     public int PunkteGeben(){
         return punkte;
+    }
+
+    public void InformationAusgeben(){
+
+    }
+    public boolean IstGleich(DATENELEMENT d){
+        return d.equals(this);
+    }
+    public boolean IstGroesser(DATENELEMENT d){
+        return ((NOTE)d).PunkteGeben() > PunkteGeben();
     }
 }

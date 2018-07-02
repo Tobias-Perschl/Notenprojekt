@@ -31,51 +31,6 @@ public class KNOTEN extends LISTENELEMENT
         return nachfolger.RestlaengeGeben() +1;
     }
 
-    DATENELEMENT Suchen(String suchStr) {
-        if (daten.SchluesselIstGleich(suchStr)) {
-            return daten;
-        }
-        else {
-            return nachfolger.Suchen(suchStr);
-        }
-    }
-
-    DATENELEMENT SortSuchen(String suchStr) {
-        if (daten.SchluesselIstGleich(suchStr)) {
-            return daten;
-        }
-        else {
-            if (daten.SchluesselIstGroesser(suchStr)) {
-                return null;
-            }
-            else {
-                return nachfolger.SortSuchen(suchStr);
-            }
-        }
-    }
-
-    boolean IstVorhanden(String suchStr) {              
-        if (daten.SchluesselIstGleich(suchStr)) {
-            return true ;
-        }
-        else {
-            return nachfolger.IstVorhanden(suchStr) ;
-        }
-    }
-
-    boolean SortIstVorhanden(String suchStr) {              
-        if (daten.SchluesselIstGleich(suchStr)) {
-            return true;
-        }
-        else {
-            if (daten.SchluesselIstGroesser(suchStr)) {
-                return false;
-            }
-            else {
-                return nachfolger.SortIstVorhanden(suchStr);
-            }
-        }
-    }
 
     KNOTEN HintenEinfuegen(DATENELEMENT dNeu)  {
         nachfolger.HintenEinfuegen(dNeu);

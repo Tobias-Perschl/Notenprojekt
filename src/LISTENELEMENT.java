@@ -12,11 +12,7 @@ public abstract class LISTENELEMENT
     abstract DATENELEMENT DatenelementGeben();
     abstract DATENELEMENT EndeGeben(DATENELEMENT d);
     abstract LISTENELEMENT KnotenEntfernen(DATENELEMENT d);
-    abstract DATENELEMENT Suchen(String suchStr);
-    abstract DATENELEMENT SortSuchen(String suchStr);
-    abstract boolean IstVorhanden(String suchStr);  
-    abstract boolean SortIstVorhanden(String suchStr);  
-    abstract KNOTEN EinfuegenVor(DATENELEMENT dNeu, DATENELEMENT dVor);    
+    abstract KNOTEN EinfuegenVor(DATENELEMENT dNeu, DATENELEMENT dVor);
     abstract KNOTEN EinfuegenSortiert(DATENELEMENT dNeu); 
     abstract void InformationAusgeben();
 }
