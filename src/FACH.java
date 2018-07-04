@@ -1,16 +1,18 @@
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FACH {
-    LISTE[] muendliche;
-    LISTE[] schriftliche;
+    List<NOTE>[] muendliche;
+    List<NOTE>[] schriftliche;
     String name;
     Color farbe;
 
     public FACH(String name, Color farbe) {
         this.name = name;
         this.farbe = farbe;
-        muendliche = new LISTE[3];
-        schriftliche = new LISTE[3];
+        muendliche = new ArrayList[3];
+        schriftliche = new ArrayList[3];
     }
 
     public void MuendlicheNoteHinzufuegen(){
