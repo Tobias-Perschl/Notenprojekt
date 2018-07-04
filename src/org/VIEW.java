@@ -1,6 +1,9 @@
+package org;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class VIEW extends JFrame {
@@ -41,6 +44,29 @@ public class VIEW extends JFrame {
         listScrollPane.getViewport().setView(faecherJlist);
         listScrollPane.setBounds(20, 20, 200, 1000);
         add(listScrollPane);
+
+        NOTE[] note = {new NOTE(15, new Date(), "",true),new NOTE(10, new Date(), "",true)};
+
+        DETAILS details = new DETAILS();
+
+        details.setBounds(230, 50, details.getPreferredSize().width, details.getPreferredSize().height);
+        add(details);
+
+        faecher.get(0).MuendlicheNoteHinzufuegen(note[0], 1);
+
+        faecherJlist.addListSelectionListener(e -> {
+            try {
+                FACH fach;
+                fach = faecher.get(faecherJlist.getSelectedIndex());
+
+                details.AktualisiereDetails(fach);
+            } catch (IndexOutOfBoundsException ioobe) {
+                ioobe.printStackTrace();
+            }
+
+        });
+
+        SwingUtilities.updateComponentTreeUI(this);
 
     }
 }

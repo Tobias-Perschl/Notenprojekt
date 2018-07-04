@@ -1,3 +1,5 @@
+package org;
+
 import java.util.Date;
 
 public class NOTE {
@@ -8,6 +10,14 @@ public class NOTE {
     private boolean schriftlich;
 
     public NOTE(int punkte, Date datum, String bemerkung, boolean schriftlich){
+        this.punkte=punkte;
+        this.datum=datum;
+        this.bemerkung=bemerkung;
+        this.schriftlich=schriftlich;
+
+    }
+
+    public NOTE(int punkte, Date datum, String bemerkung){
         this.punkte=punkte;
         this.datum=datum;
         this.bemerkung=bemerkung;
@@ -103,5 +113,10 @@ public class NOTE {
 
     public int PunkteGeben(){
         return punkte;
+    }
+
+    @Override
+    public String toString() {
+        return ""+PunkteGeben();
     }
 }
